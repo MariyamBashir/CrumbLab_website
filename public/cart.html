@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        .cart-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .cart-total {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #333;
+        }
+        .empty-cart {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>🛒 Your Shopping Cart</h1>
+        <div id="cart-items">
+            
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartContainer = document.getElementById('cart-items');
+            
+            
+            const cartData = JSON.parse(localStorage.getItem('cart')) || {};
+            const sessionId = 'user123'; 
+            
+            
+            if (!cartData[sessionId] || cartData[sessionId].length === 0) {
+                cartContainer.innerHTML = `
+                    <div class="empty-cart">
+                        <h2>Your cart is empty</h2>
+                        <p>Add some items from the store!</p>
+                        <a href="/public/cart_add.html" style="color: #27ae60;">← Go to Add Items</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            
+            const items = cartData[sessionId];
+            let total = 0;
+            let html = '';
+            
+            items.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                html += `
+                <div class="cart-item">
+                    <div>
+                        <h3>${item.name}</h3>
+                        <p>Product ID: ${item.productId}</p>
+                        <p>Price: Rs. ${item.price}</p>
+                        <p>Quantity: ${item.quantity}</p>
+                    </div>
+                    <div>
+                        <h3>Rs. ${itemTotal.toFixed(2)}</h3>
+                        <button onclick="removeItem(${index})" style="background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">
+                            Remove
+                        </button>
+                    </div>
+                </div>
+                `;
+            });
+            
+            
+            html += `
+            <div class="cart-total">
+                <p>Total Items: ${items.length}</p>
+                <p>Total Amount: Rs. ${total.toFixed(2)}</p>
+                <button style="background: #27ae60; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                    Checkout Now
+                </button>
+            </div>
+            `;
+            
+            cartContainer.innerHTML = html;
+        });
+        
+        
+        function removeItem(index) {
+            const sessionId = 'user123';
+            let cart = JSON.parse(localStorage.getItem('cart')) || {};
+            
+            if (cart[sessionId]) {
+                cart[sessionId].splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Item removed from cart!');
+                location.reload(); 
+            }
+        }
+    </script>
+</body>
+</html>

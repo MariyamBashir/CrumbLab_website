@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Cart</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .item { background: #f9f9f9; padding: 10px; margin: 10px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Cart Items List</h1>
+    <div id="cart-view"></div>
+    
+    <script>
+        
+        const cart = JSON.parse(localStorage.getItem('cart')) || {};
+        const sessionId = 'user123'; 
+        
+        const cartDiv = document.getElementById('cart-view');
+        
+        if (cart[sessionId] && cart[sessionId].length > 0) {
+            let html = '';
+            cart[sessionId].forEach(item => {
+                html += `
+                <div class="item">
+                    <strong>${item.name}</strong><br>
+                    Price: Rs. ${item.price}<br>
+                    Quantity: ${item.quantity}<br>
+                    Total: Rs. ${item.price * item.quantity}
+                </div>
+                `;
+            });
+            cartDiv.innerHTML = html;
+        } else {
+            cartDiv.innerHTML = '<p>No items in cart.</p>';
+        }
+    </script>
+</body>
+</html>

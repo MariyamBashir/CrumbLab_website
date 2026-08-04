@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrumbLab - Catering</title>
+    <link rel="stylesheet" href="event.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="navbar"> 
+        <div class="nav-links left-links">  
+            <a href="Home.html">Home</a>
+            <a href="Home.html#about-us">About Us</a>
+            <a href="menu.html">Menu</a>
+        </div>
+        <div class="logo">CrumbLab</div> <div class="right-nav-content"> <div class="nav-links right-links">
+            <a href="gallery.html">Our Gallery</a>
+            <a href="Home.html#contact-us">Contact us</a>
+            <a href="event.html">Event</a>
+        </div>
+        <div class="nav-icons">
+            <i id="wishlist-icon" class="fa-regular fa-heart heart-icon"></i>
+            <i id="shop" class="fa-solid fa-cart-shopping"></i> 
+        </div>
+    </div>
+    </header>
+        <div class="catering-section"> 
+            <div class="pic1-container">
+                <img data-src="Pic1.jpg" alt="A well-set dining table with plates and glasses" class="background-image-content lazyImg">
+                </div>
+                <div class="catering-info-box">
+                    <p class="info-text">
+                    Allow CrumbLab to cater for your next event. From Weddings to small gatherings, informal buffets to plated events, and large pre-packaged meals to pick up and reheat at home. We look forward to offering you and your guests thoughtful, satisfying, inspired options to compliment your next gathering.
+                    </p>
+                <div class="call-to-action">
+                    Please give us a <a href="tel:123456789">call</a> or send an <a href="mailto:CrumbLab@gmail.com">email</a> for further details.
+                </div>
+            </div>
+        </div>
+        
+        <section class="request-quote-section">
+            <div class="inner-content-box">
+                <div class="quote-image-container">
+                    <img data-src="picno2.jpg" alt="Dining table with olive-patterned cloth" class="quote-background-image lazyImg">
+                </div>
+                <div class="quote-form-container">
+                    <h2 class="form-title">Request a Quote</h2>
+                    <form id="quote-request-form" action="#" method="POST" class="quote-form">
+                        <label for="full-name">Full Name*</label>
+                        <input type="text" id="full-name" name="fullName" required>
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="phone">Phone*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <label for="date">Select a Date*</label>
+                        <div class="date-input-wrapper">
+                            <input type="text" id="date" name="date" placeholder="mm / dd / yyyy" required>
+                            <span class="input-icon calendar-icon"></span> 
+                        </div>
+                        <div class="guest-time-group">
+                            <div class="guest-group">
+                            <label for="guest-count">Guest Count*</label>
+                            <input type="text" id="guest-count" name="guestCount" placeholder="-- / --" required>
+                        </div>
+                        <div class="time-group">
+                            <label for="time">What Time*</label>
+                                <div class="time-input-wrapper">
+                                <input type="text" id="time" name="time" placeholder="-- : --" required>
+                                <span class="input-icon clock-icon"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="message">Write a message*</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="section3-note">
+            <div class="note-box">
+                <p>
+                    <span class="note-heading">Please Note:</span> We do not automatically provide silverware or serving items with your order. If you need utensils,cutlery, cups, napkins, or plates, these are available for an **additional charge**. Please let us know as soon as possible if you'll need any of these items so we can include them with your order. Thank you!
+                </p>
+            </div>
+        </section>
+
+        <section id="section4-gallery">
+            <div class="main-container">
+                <div class="inner-gallery-box">
+                    <div class="image-wrapper wide-image">
+                        <img data-src="Pic3.jpg" alt="A display of fresh bread and pastries" class="lazyImg">
+                    </div>
+                    <div class="image-wrapper narrow-image">
+                        <img data-src="Pic4.jpg" alt="2nd image of a bakery" class="lazyImg">
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+    <footer class="main-footer">
+        <div class="footer-logo-copyright">
+            <h1 class="footer-logo">CrumbLab</h1>
+            <p class="copyright">© 2025 by Maryam-Laiba-Abrish.</p>
+        </div>
+        <div class="footer-contact-info">
+            <p class="contact-line">123-456-7890</p>
+            <p class="contact-line"><a href="mailto:info@CrumbLab.com">info@CrumbLab.com</a></p>
+            <p class="contact-line">500 Terry Francine St. San <br> Francisco, CA 94158</p>
+        </div>
+        <div class="footer-social-icons">
+            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+    </footer>
+    <script src="event.js"></script>
+</body>
+</html>

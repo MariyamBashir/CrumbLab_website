@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrumbLab - Cakes, Cup Cakes & Donuts</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet"> <!--For icons-->
+    <link rel="stylesheet" href="menu.css"> <!--CSS file link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--for font family-->
+    <script src="menu.js"></script> <!--JS file link-->
+</head>
+
+<body> 
+    <!--Header tag-->
+    <header class="navbar"> 
+        <div class="nav-links left-links">
+            <a href="Home.html">Home</a>
+            <a href="Home.html#about-us">About Us</a>
+            <a href="menu.html">Menu</a>
+        </div>
+
+        <div class="logo">CrumbLab</div>
+         <div class="right-nav-content">
+             <div class="nav-links right-links">
+            <a href="gallery.html">Our Gallery</a>
+            <a href="Home.html#contact-us">Contact us</a>
+            <a href="event.html">Event</a>
+        </div>
+        
+        <div class="nav-icons"> <i class="fa-regular fa-heart heart-icon"></i>
+            <a href="/public/cart_view.html">
+                <i id="shop" class="fa-solid fa-cart-shopping"></i> 
+            </a>
+        </div>
+    </div>
+    </header>
+   
+    <!--For Section-->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-title">Cakes, Cup Cakes & Donuts</h1>
+        </div>
+    </section>
+ 
+    <!-- for default sorting-->
+    <div class="sorting-container">
+    <div class="sort-dropdown" id="sortDropdown">
+
+        <button id="sortTrigger" class="sort-trigger">
+            Default sorting 
+            <i class="fa-solid fa-chevron-down"></i> <!--for dropdown icon-->
+        </button>
+
+        <ul class="sort-list"> <!--For Filters-->
+            <li class="active">Default sorting</li>
+            <li>Sort by popularity</li>
+            <li>Sort by latest</li>
+            <li>Sort by price: low to high</li>
+            <li>Sort by price: high to low</li>
+        </ul>
+    </div>
+</div>
+ 
+   <!--main tag-->
+    <main>      
+        <!--This section is for Cakes-->
+    <section class="product-grid">
+        <!--For 1st item-->
+        <div class="product-card">
+            <img data-src="chocolate cake.PNG" alt="Chocolate Cake" class="product-image lazy"> <!--for image-->
+            <div class="product-info">
+                <h3 class="product-title">Chocolate Cake</h3>
+                <p class="product-description">Rich, moist chocolate layered with creamy frosting.</p>
+                <p class="product-price">Rs 3,100</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button> <!--minus button-->
+                    <span class="quantity-display">1</span> <!--for quantity-->
+                    <button class="quantity-btn plus">+</button> <!--plus button-->
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--For 2nd item-->
+        <div class="product-card">
+            <img data-src="red velvel.PNG" alt="Red Velvet Cake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Red Velvet Cake</h3>
+                <p class="product-description">Soft red cake with a hint of cocoa and cream cheese icing.</p>
+                <p class="product-price">Rs 1,800</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+        
+        <!--For 3rd item-->
+        <div class="product-card">
+            <img data-src="vanilla cake.PNG" alt="Vanilla Cake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Vanilla Cake</h3>
+                <p class="product-description">Classic vanilla sponge with smooth frosting.</p>
+                <p class="product-price">Rs 3,200</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--For fourth item-->
+        <div class="product-card">
+            <img data-src="black forest.jpeg" alt="Black Forest Cake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Black Forest Cake</h3>
+                <p class="product-description">Chocolate sponge with cherries and whipped cream.</p>
+                <p class="product-price">Rs 3,400</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--For fifth item-->
+        <div class="product-card">
+            <img data-src="coffee cake.jpeg" alt="Coffee Cake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Coffee Cake</h3>
+                <p class="product-description">Moist cake infused with coffee flavor and crumb topping.</p>
+                <p class="product-price">Rs 1,800</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--For sixth item-->
+        <div class="product-card">
+            <img data-src="Strawberry Shortcake Cake.jpeg" alt="Strawberry Shortcake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Strawberry Shortcake</h3>
+                <p class="product-description">Layers of sponge, cream, and fresh strawberries.</p>
+                <p class="product-price">Rs 3,000</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--This section is for cupcakes-->
+    <section class="section-title-bar">
+        <div class="title-content">
+            <h2 class="section-title">Cup Cakes</h2>
+        </div>
+    </section>
+   <!--Cupcake item1-->
+    <section class="product-grid cup-cakes-grid"> <!--2 classes assign one is product-grid other is cup-cakes-grid-->
+        <div class="product-card">
+            <img data-src="Vanilla Cupcakes.jpeg" alt="Vanilla Cupcake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Vanilla Cupcake</h3>
+                <p class="product-description">Classic vanilla sponge with smooth frosting.</p>
+                <p class="product-price">Rs 500</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--item2-->
+        <div class="product-card">
+            <img data-src="Chocolate cupcake.jpeg" alt="Chocolate Cupcake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Chocolate Cupcake</h3>
+                <p class="product-description">Rich chocolate cake with smooth chocolate frosting.</p>
+                <p class="product-price">Rs 250</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+ 
+        <!--item3-->
+        <div class="product-card">
+            <img data-src="Red Velvet Cupcakes.jpeg" alt="Red Velvet Cupcake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Red Velvet Cupcake</h3>
+                <p class="product-description">Soft red cupcake with cream cheese topping.</p>
+                <p class="product-price">Rs 250</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--item4-->
+        <div class="product-card">
+            <img data-src="Lemon Cupcake.jpeg" alt="Lemon Cupcake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Lemon Cupcake</h3>
+                <p class="product-description">Zesty lemon sponge with tangy lemon glaze.</p>
+                <p class="product-price">Rs 250</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--item5-->
+        <div class="product-card">
+            <img data-src="BEST Strawberry Shortcake Cupcakes Recipe Beginner Friendly.jpeg" alt="Strawberry Cupcake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Strawberry Cupcake</h3>
+                <p class="product-description">Light sponge topped with fresh strawberry cream.</p>
+                <p class="product-price">Rs 250</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--item6-->
+        <div class="product-card">
+            <img data-src="coffee cupcake.jpeg" alt="Coffee Cupcake" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Coffee Cupcake</h3>
+                <p class="product-description">Fluffy cupcake infused with rich coffee flavor.</p>
+                <p class="product-price">Rs 250</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--Donuts Section-->
+    <section class="section-title-bar donuts-title-bar">
+        <div class="title-content">
+            <h2 class="section-title">Donuts</h2>
+        </div>
+    </section>
+
+    <section class="product-grid donuts-grid">
+        <div class="product-card">
+            <!--item1-->
+            <img data-src="Nutella Baked Donuts.jpeg" alt="Nutella Donut" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Nutella Donut</h3>
+                <p class="product-description">Airy donut filled with hazelnut chocolate with sweet cocoa sprinkled on top.</p>
+                <p class="product-price">Rs 300</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--item2-->
+        <div class="product-card">
+            <img data-src="Pistachio Rosewater Doughnut - Savory Splash.jpeg" alt="Pistachio Kunafa Donut" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Pistachio Kunafa</h3>
+                <p class="product-description">Filled with creamy pistachio kunafa, topped with chocolate & crushed pistachios.</p>
+                <p class="product-price">Rs 400</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--item3-->
+        <div class="product-card">
+            <img data-src="donut de lotus.jpeg" alt="Lotus Donut" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Lotus Donut</h3>
+                <p class="product-description">Spread with light Lotus Biscoff and topped with Lotus crumbs for richness.</p>
+                <p class="product-price">Rs 250</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--item4-->
+        <div class="product-card">
+            <img data-src="Oreo dunut.jpeg" alt="Oreo Donut" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Oreo Donut</h3>
+                <p class="product-description">Oreo cream cheese filled donut with oreo crumbles on milk and white chocolate.</p>
+                <p class="product-price">Rs 250</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--item5-->
+        <div class="product-card">
+            <img data-src="Raspberry Donuts .jpeg" alt="Raspberry Donut" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Raspberry Donut</h3>
+                <p class="product-description">Fluffy mini donut topped & filled with finest raspberry puree delightfully sweet.</p>
+                <p class="product-price">Rs 250</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+
+        <!--item6-->
+        <div class="product-card">
+            <img data-src="RED VELVET DONUTS.jpeg" alt="Red Velvet Donut" class="product-image lazy">
+            <div class="product-info">
+                <h3 class="product-title">Red Velvet Donut</h3>
+                <p class="product-description">Made with our signature red velvet icing with the filling of imported cream cheese.</p>
+                <p class="product-price">Rs 250</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="quantity-btn plus">+</button>
+                </div>
+                <a href="/public/cart_add.html">
+                    <button class="add-to-cart-btn">Add to cart</button>
+                </a>
+            </div>
+        </div>
+    </section><!--section tag closed-->
+    
+    <!--For add to cart-->
+    <div id="cartModal" class="modal">
+    <div class="modal-content">
+        <!--<span class="close-btn">&times;</span> -->
+        <span class="close-btn"><i class="fa-solid fa-xmark"></i></span> <!--Closing button icon-->
+
+        <div class="modal-body">
+            <h2 class="modal-title">Product was successfully added to your cart.</h2>
+            <div class="modal-actions">
+                <button id="continueShopping" class="modal-btn continue-btn">Continue shopping</button>
+                <button class="modal-btn view-cart-btn">View cart</button> 
+            </div>
+        </div>
+    </div>
+</div>
+</main> <!--main tag closed-->
+
+<!--Shopping sidebar-->
+<div id="sideCart" class="side-cart">
+    <div class="side-cart-header">
+        <h3>Shopping Cart</h3>
+       <span id="closeCartBtn"><i class="fa-solid fa-xmark"></i></span>
+
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-subtotal">
+        Subtotal: <span class="subtotal-amount">0</span>
+    </div>
+    <div class="cart-shipping">
+        Shipping Charges: <span class="shipping-amount">Rs 150</span>
+    </div>
+    <div class="cart-grand-total">
+        Grand Total: <span class="grand-total-amount" id="grandTotalDisplay">Rs 0</span>
+    </div>
+</div>
+  
+<!--Footer-->
+<footer>
+        <div class="footer-content">
+            <div class="footer-logo">CrumbLab</div>
+            
+            <div class="footer-contact">
+                <p class="underline-item">123-456-7890</p>
+                <p class="underline-item"><a href="mailto:info@Crumblab.com">info@Crumblab.com</a></p>
+                <p>500 Terry Francine St. San<br>Francisco, CA 94158</p>
+            </div>
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            
+            <div class="footer-copyright">
+               <i class="fa-regular fa-copyright"></i> 2025 by Maryam-Laiba-Abrish.
+            </div>
+        </div>
+    </footer> <!--footer tag closed-->
+ 
+     
+</body>
+</html>

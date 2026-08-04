@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add to Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2
+        }
+
+        .form-container {
+            width: 320px;
+            margin: 80px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .1)
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold
+        }
+
+        input {
+            width: 100%;
+            padding: 7px;
+            margin: 5px 0 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background: #27ae60;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Add Item to Cart</h2>
+
+        <form id="cart-form" method="POST" action="/cart/add">
+            <label>Session ID</label>
+            <input name="sessionId" id="sessionId" required value="user123">
+
+            <label>Product ID</label>
+            <input name="productId" id="productId" required>
+
+            <label>Product Name</label>
+            <input name="name" id="name" required>
+
+            <label>Price (Rs)</label>
+            <input name="price" id="price" type="number" required>
+
+            <label>Quantity</label>
+            <input name="quantity" id="quantity" type="number" value="1" required>
+
+            <button type="submit">Add to Cart</button>
+        </form>
+
+        <p id="message" style="text-align:center; margin-top:10px;"></p>
+    </div>
+
+    <script>
+       
+        const form = document.getElementById("cart-form");
+        const message = document.getElementById("message");
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+        const sessionId = document.getElementById("sessionId").value;
+        const productId = document.getElementById("productId").value;
+        const name = document.getElementById("name").value;
+        const price = parseFloat(document.getElementById("price").value);
+        const quantity = parseInt(document.getElementById("quantity").value);
+
+        try {
+       
+            let cart = JSON.parse(localStorage.getItem('cart')) || {};
+        
+        
+            if (!cart[sessionId]) {
+                cart[sessionId] = [];
+            }   
+        
+       
+            const existingIndex = cart[sessionId].findIndex(item => item.productId === productId);
+        
+            if (existingIndex !== -1) {
+           
+                cart[sessionId][existingIndex].quantity += quantity;
+            } else {
+            
+                cart[sessionId].push({ 
+                    productId, 
+                    name, 
+                    price, 
+                    quantity,
+                    date: new Date().toISOString()
+                });
+            }
+        
+        
+            localStorage.setItem('cart', JSON.stringify(cart));
+        
+        
+            message.textContent = `"${name}" added to cart successfully! Total items: ${cart[sessionId].length}`;
+            message.style.color = "green";
+        
+        
+            document.getElementById("productId").value = '';
+            document.getElementById("name").value = '';
+            document.getElementById("price").value = '';
+            document.getElementById("quantity").value = '1';
+        
+            console.log('Cart saved:', cart); 
+        
+        } catch (err) {
+            console.error('Error:', err);
+            message.textContent = "Error adding to cart";
+            message.style.color = "red";
+        }
+        });
+    </script> 
+
+</body>
+
+</html>

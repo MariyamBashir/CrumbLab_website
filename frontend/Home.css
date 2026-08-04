@@ -1,0 +1,901 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-bg: #1e1e1e; 
+    --light-text: #ffffff; 
+    --accent-color: #e5c0a2; 
+    --logo-font: 'Playfair Display', serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    font-family: var(--body-font);
+    overflow-x: hidden;
+    font-family:'Inria Serif', serif;
+    margin:0;
+}
+/* --- NAVBAR STYLING --- */
+.navbar{
+    background-color:#2D3433; 
+    color: white;
+    display: grid; 
+    grid-template-columns: 1fr auto 1fr; 
+    column-gap:50px;
+    align-items: center;
+    padding: 10px 40px; 
+    font-size: 20px;
+}
+.logo{
+    font-family: 'Inria Serif', serif; 
+    font-size: 32px;
+    font-weight: 500;
+    color: white; 
+    letter-spacing: 1px;
+    grid-column: 2; 
+    text-align: center;
+}
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap: 30px; 
+}
+.left-links{ 
+    grid-column: 1; 
+    display:flex;
+    justify-content: flex-end; 
+    gap:30px;
+}
+.nav-links a{
+    font-size: 18px; 
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: var(--body-font); 
+}
+.nav-links a:hover{
+    color: #d4a770; 
+}
+.right-nav-content{
+    grid-column: 3; 
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:30px; 
+}
+.right-links {
+    gap: 30px;
+}
+.nav-icons{
+    margin-left: auto; 
+    display:flex;
+    align-items:center;
+    gap: 15px; 
+}
+.nav-icons i{
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+.nav-icons i:hover{
+    color: #d4a770; 
+}
+/* --- MAIN CONTENT GRID LAYOUT --- */
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    min-height: 100vh; 
+}
+/* --- LEFT COLUMN --- */
+.left-column {
+    display: grid;
+    grid-template-rows: 60% 40%; 
+    background-color: var(--dark-bg);
+}
+.hero-section {
+    padding: 150px 100px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section h2 {
+    font-family: var(--logo-font);
+    font-size: 60px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    max-width: 450px;
+    text-align: center;
+}
+.logo-placeholder {
+    margin-bottom: 30px;
+}
+.explore-btn {
+    background-color: var(--light-text);
+    color: var(--dark-bg);
+    border: none;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.explore-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+}
+.about-chefs-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* --- RIGHT COLUMN--- */
+.right-column {
+    display: grid;
+    grid-template-rows: 60% 40%; 
+}
+.gallery-image-top img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.text-content-bottom {
+    background-color: #2D3433;
+    padding: 50px 80px;
+}
+.text-content-bottom h3 {
+    font-family: var(--logo-font);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+.text-content-bottom h3:first-child {
+    margin-top: 0; 
+}
+.text-content-bottom p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8); 
+}
+/* --- SECTION TWO --- */
+:root {
+    --dark-bg: #1e1e1e;
+    --light-text: #ffffff;
+    --accent-color: #e5c0a2;
+    --logo-font: 'Inria Serif', serif;
+    --body-font: 'Inria Serif', serif;
+    --promo-box-bg: #303534; 
+    --main-section-bg: #a6b8b7; 
+    --section-two-dark-text: #2d3433; 
+    --promo-box-light-text: #ffffff;
+    --promo-button-bg: #e0e0e0;
+    --promo-button-text: #303534; 
+    --separator-line-color: #5d6766;
+}
+/* Base grid for the entire section (2x2 layout) */
+.section-two-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+    min-height: 100vh; 
+}
+/* 1. Promotion Boxxs*/
+.promotion-box {
+    background-color: var(--main-section-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.promo-content {
+    background-color: var(--promo-box-bg);
+    color: var(--promo-box-light-text);
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 400px;
+}
+.limited-time-offer {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.promo-content h2 {
+    font-family: var(--logo-font);
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+.promo-description {
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: rgb(255, 255, 255);
+}
+.get-offer-btn {
+    background-color: var(--promo-button-bg);
+    color: var(--promo-button-text);
+    border: none;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.get-offer-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--promo-box-light-text);
+}
+/* 2. Product Image */
+.product-image-section {
+    background-color: var(--main-section-bg);
+    overflow: hidden;
+}
+.product-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* 3. Why Choose Us  */
+.why-choose-us-section {
+    background-color: var(--promo-box-bg); /* Dark background */
+    color: var(--promo-box-light-text); /* Light text */
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family:'Inria Serif', serif;
+}
+.choose-us-title {
+    font-family: var(--logo-font);
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.choose-us-text {
+    font-family: var(--logo-font);
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 300;
+    max-width: 550px;
+}
+/* 4. Features List */
+.features-list-section {
+    background-color: var(--main-section-bg); 
+    color: black; 
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Inria Serif', serif;
+    /*font-weight: 600;*/
+}
+.crafting-note {
+    font-family: var(--logo-font);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--separator-line-color);
+    padding-bottom: 15px;
+}
+.feature-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--separator-line-color);
+}
+.feature-item:last-child {
+    border-bottom: none; 
+}
+.feature-title {
+    font-family: var(--body-font);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.feature-description {
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.5;
+    color:var(--dark-bg); 
+}
+/* --- SECTION THREE: CONTACT --- */
+:root {
+    --contact-form-bg: #d8dbda; 
+    --form-text-color: #303534; 
+    --form-button-bg: white; 
+}
+/* 1. Main Section  */
+.contact-section-grid {
+    background-color: #303534; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 80px 0; 
+}
+/* 2. Inner Box (The container for the image and form) */
+.contact-inner-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--dark-bg);
+    max-width: 1100px;
+    width: 90%; 
+}
+/* 3. Image Container (Left side of the innerrr box) */
+.contact-image-container {
+    overflow: hidden;
+}
+.contact-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* 4. Form Container(right side of inner boxx  */
+.contact-form-container {
+    background-color: var(--contact-form-bg); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+/* 5. Form Element Styling */
+.contact-form {
+    width: 80%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    color: var(--form-text-color); 
+}
+.contact-form h2 {
+    font-family: var(--logo-font);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+    padding: 15px;
+    margin-bottom: 25px;
+    border: none;
+    background-color: #e4e7e6; 
+    color: var(--form-text-color);
+    font-size: 16px;
+    font-family: var(--body-font);
+}
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: rgb(48, 53, 52); 
+}
+.contact-form .submit-btn {
+    background-color: var(--form-button-bg); 
+    color: var(--form-text-color);
+    border: 1px solid rgb(48, 53, 52); 
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: center;
+    
+}
+.contact-form .submit-btn:hover {
+    background-color: var(--accent-color);
+}
+/* --- FOOTER SECTION --- */
+:root {
+    --footer-bg-color-new: #e6eded; 
+    --footer-text-color: #303534; 
+}
+.main-footer {
+    background-color: var(--footer-bg-color-new); 
+    color: var(--footer-text-color);
+    padding: 70px 100px;
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1fr; 
+    align-items: flex-start; 
+    gap: 40px;
+}
+.footer-logo-copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%; 
+}
+.footer-logo {
+    font-family: var(--logo-font); 
+    font-size: 50px; 
+    font-weight: 400; 
+    margin-bottom: 20px;
+    line-height: 1;
+}
+.copyright {
+    font-size: 16px;
+    font-family: var(--body-font);
+    color: var(--footer-text-color);
+    margin-top: 50px; 
+}
+.footer-contact-info {
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.6; 
+    padding-top: 15px; 
+}
+.contact-line {
+    margin-bottom: 5px; 
+}
+.footer-contact-info a {
+    color: var(--footer-text-color);
+    text-decoration: underline; 
+}
+.footer-contact-info p:first-child {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.footer-social-icons {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-start; 
+    gap: 25px;
+    padding-top: 10px; 
+}
+.footer-social-icons a i {
+    font-size: 48px; 
+    color: var(--footer-text-color);
+}
+.footer-social-icons a i:hover {
+    color: var(--accent-color);
+}
+/* Mobile Layout (max-width: 480px) */
+/* Stacking Order: Hero Section (1) -> Right Column (2) -> Chefs Image (3) */
+@media (max-width: 480px) {
+    body {
+        background-color: var(--light-text); 
+        color: var(--dark-bg);
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+    }
+    .left-links,
+    .right-links {
+        display: none;
+    }
+    .logo {
+        font-size: 24px;
+        text-align: left;
+        grid-column: unset;
+    }
+    .main-content-grid {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        min-height: auto;
+    }
+    .left-column {
+        background-color: transparent; 
+        display: contents;
+    }
+    .hero-section {
+        padding: 50px 30px 30px 30px; 
+        background-color: var(--dark-bg);
+        color: var(--light-text);
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align:center;
+    }
+    .hero-section h2 {
+        font-size: 36px;
+        max-width: none;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .logo-placeholder {
+        margin-bottom: 20px;
+        font-size: 32px;
+        align-self: center;
+    }
+    .explore-btn {
+        padding: 10px 30px;
+        font-size: 14px;
+        align-self: center;
+    }
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        order: 2; 
+        width: 100%;
+        padding:0;
+        margin:0;
+    }
+    .gallery-image-top {
+        order: 1; 
+        line-height:0;
+        font-size:0;
+    }
+    .gallery-image-top img {
+        height: auto;
+        display:block;
+    }
+    .text-content-bottom {
+        background-color: var(--dark-bg); 
+        color: var(--light-text);
+        padding: 40px 30px;
+        order: 2; 
+    }
+    .text-content-bottom h3 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .text-content-bottom p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    .about-chefs-section {
+        order: 3; 
+        width: 100%;
+        line-height:0;
+        font-size:0;
+    }
+    .about-chefs-section img {
+        width: 100%;
+        height: auto;
+        display:block;
+    }
+    .section-two-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        min-height: auto;
+    }
+    .promotion-box { 
+        background-color: var(--dark-bg); 
+        padding: 30px; 
+        order: 1; 
+    }
+    .promo-content h2 { 
+        font-size: 30px; 
+    }
+    .product-image-section { 
+        background-color: var(--dark-bg); 
+        order: 2; 
+    }
+    .why-choose-us-section { 
+        background-color: #2D3433; 
+        color:white; 
+        padding: 50px 30px; 
+        order: 3; 
+    }
+    .choose-us-title {
+        font-size: 36px;
+    }
+    .features-list-section {
+        font-weight:500; 
+        background-color: var(--main-section-bg); 
+        color: var(--section-two-dark-text); 
+        padding: 50px 30px; 
+        order: 4;
+    }
+    .contact-section-grid {
+        background-color: var(--contact-form-bg);
+        padding: 50px 0 0 0 !important; 
+        margin-bottom: 0 !important; 
+    }
+    .contact-inner-box {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: none;
+        background-color: var(--contact-form-bg);
+        box-shadow: none;
+        display:flex;
+        flex-direction:column;
+    }
+    .contact-image-container { 
+        display: block; 
+        width:100%; 
+        order:2;
+        margin:0 !important; 
+        padding:0 !important;
+        line-height:0 !important;
+        font-size:0 !important;
+        margin-bottom: 0 !important;
+    }
+    .contact-form-container {
+        padding: 40px 30px;
+        order:1;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .contact-form h2 {
+        font-size: 26px;
+    }
+    .contact-image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .main-footer {
+        grid-template-columns: 1fr; 
+        padding:  40px 30px; 
+        gap: 25px;
+        text-align: left !important;
+        margin-top:0 ; 
+        padding-top: 0 !important;
+        order:7;
+    }
+    .footer-logo{
+        font-size:40px;
+        margin-bottom: 5px;
+        text-align: left !important;
+    }
+    .footer-logo-copyright { align-items: flex-start; text-align: left; }
+    .footer-contact-info { padding-top: 0; }
+    .footer-social-icons { justify-content: flex-start; padding-top: 0; }
+    .footer-social-icons a i { font-size: 36px; }
+}
+/* for tablets: 481px–599px */
+@media (min-width: 481px) and (max-width: 599px) {
+    .navbar {
+        width: 100%;
+        padding: 10px 20px;
+        background-color: var(--dark-bg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-links a {
+        font-size: 14px;
+        padding: 4px 6px;
+        white-space: nowrap;
+    }
+    .main-content-grid,
+    .left-column,
+    .right-column,
+    .hero-section,
+    .text-content-bottom,
+    .gallery-image-top,
+    .about-chefs-section,
+    .section-two-grid,
+    .contact-section-grid,
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .lazyImg,
+    .hero-section img,
+    .gallery-image-top img,
+    .about-chefs-section img,
+    .product-image-section img,
+    .contact-image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .text-content-bottom,
+    .promotion-box,
+    .why-choose-us-section,
+    .features-list-section,
+    .contact-form-container {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+/*for small devices for max-width upto 798px*/
+@media (max-width: 798px) {
+    .main-content-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .left-column { 
+        display: contents; 
+        width: 100%;
+    }
+    .hero-section {
+        padding: 72px 40px 40px 40px;
+        background-color: var(--dark-bg);
+        color: var(--light-text);
+        order: 1;
+        width: 100%;
+        text-align: center;         
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+    .hero-section h2 {
+        font-size: 44px;
+        margin-bottom: 24px;
+        line-height: 1.04;
+        text-align: center;
+    }
+    .logo-placeholder {
+        margin-bottom: 24px;
+        font-size: 40px;
+        text-align: center;         
+    }
+    .explore-btn {
+        padding: 14px 36px;
+        font-size: 16px;
+        align-self: center;         
+    }
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        width: 100%;
+    }
+    .gallery-image-top {
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+    .gallery-image-top img {
+        width: 100%;              
+        height: auto;
+        display: block;
+    }
+    .text-content-bottom {
+        background-color: var(--dark-bg);
+        color: var(--light-text);
+        padding: 60px 40px;
+        order: 2;
+        text-align: center;         
+        width: 100%;
+    }
+    .text-content-bottom h3 { 
+        font-size: 24px; 
+        text-align: center;
+    }
+    .text-content-bottom p { 
+        font-size: 17px; 
+        line-height: 1.7;
+        text-align: center;
+    }
+    .about-chefs-section {
+        order: 3;
+        width: 100%;
+        text-align: center;
+    }
+    .about-chefs-section img {
+        width: 100%;              
+        height: auto;
+        display: block;
+    }
+    .section-two-grid { 
+        grid-template-columns: 1fr; 
+        width: 100%;
+        text-align: center;
+    }
+    .promotion-box { 
+        padding: 48px; 
+        order: 1; 
+        width: 100%;
+        text-align: center;
+    }
+    .promo-content h2 { 
+        font-size: 34px; 
+        text-align: center; 
+    }
+    .why-choose-us-section { 
+        padding: 68px 40px; 
+        width: 100%;
+        text-align: center;
+    }
+    .choose-us-title { 
+        font-size: 40px; 
+        text-align: center; 
+    }
+    .features-list-section { 
+        padding: 68px 40px; 
+        width: 100%;
+        text-align: center;
+    }
+    .contact-section-grid { 
+        padding: 72px 0 0 0 !important;
+        width: 100%;
+    }
+    .contact-inner-box { 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .contact-image-container { 
+        width: 100%;
+        order: 2;
+        text-align: center;
+    }
+    .contact-image-container img {
+        width: 100%;               
+        height: auto;
+        display: block;
+    }
+    .contact-form-container { 
+        padding: 56px 40px; 
+        order: 1;
+        text-align: center;
+        width: 100%;
+    }
+    .contact-form h2 { 
+        font-size: 30px;
+        text-align: center;
+    }
+    .main-footer {
+        grid-template-columns: 1fr;
+        padding: 60px 40px;
+        width: 100%;
+        text-align: left;       
+        gap: 32px;
+    }
+    .footer-logo { 
+        font-size: 46px;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+    .footer-social-icons a i { 
+        font-size: 40px;
+        align-self:left; 
+    }
+}
+/* LARGE SCREENS (≥ 1200px) */
+@media (min-width: 1200px) {
+    .main-content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto; 
+    }
+    .hero-section h2 {
+        font-size: 56px;
+    }
+    .logo-placeholder img {
+        width: 180px;
+    }
+    .explore-btn {
+        font-size: 20px;
+        padding: 14px 28px;
+    }
+    .text-content-bottom {
+        padding: 50px 60px;
+        font-size: 20px;
+    }
+    .navbar {
+        width: 100%;
+        max-width: 100%;
+        /*padding: 20px 40px;*/
+    }
+    .nav-icons i{
+        margin-left: auto; 
+        display:flex;
+        align-items:center;
+        gap: 15px; 
+    }
+}

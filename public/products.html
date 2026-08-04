@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Products - CrumbLab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #8B4513; 
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  border-right: 1px solid #7a3a10;
+  font-weight: bold;
+}
+
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+th:last-child, td:last-child {
+  border-right: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background: #f9f9f9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Products List</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price (Rs)</th>
+        <th>Category</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="productTable"></tbody>
+  </table>
+
+</div>
+
+<script>
+fetch("/products")
+  .then(res => res.json())
+  .then(data => {
+    const table = document.getElementById("productTable");
+
+    data.forEach(p => {
+      table.innerHTML += `
+        <tr>
+          <td>${p.id}</td>
+          <td>${p.name}</td>
+          <td>${p.price}</td>
+          <td>${p.category}</td>
+          <td>${p.description || 'No description available'}</td>
+        </tr>
+      `;
+    });
+  });
+</script>
+
+</body>
+</html>

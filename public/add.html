@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2
+        }
+
+        .form-container {
+            width: 320px;
+            margin: 80px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .1)
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold
+        }
+
+        input {
+            width: 100%;
+            padding: 7px;
+            margin: 5px 0 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background: #2980b9;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor:pointer;
+        }
+        select {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Add Product</h2>
+
+        <form method="POST" action="/products">
+            <label>Product ID</label>
+            <input name="id" required>
+
+            <label>Product Name</label>
+            <input name="name" required>
+
+            <label>Price (Rs)</label>
+            <input name="price" type="number" required>
+
+            <label>Category</label>
+            <select name="category" required>
+            <option value="">Select Category</option>
+            <option value="Cake">Cake</option>
+            <option value="Cupcakes">Cupcakes</option>
+            <option value="Donuts">Donuts</option>
+           </select>
+           <br>
+
+           <label>Description</label>
+            <input name="description" type="text">
+            <button>Add Product</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
